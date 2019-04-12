@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Javascript Development Course 15</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script>
+function hitung(){
+
+var myForm = document.kalkulator;
+var angka1=eval(myForm.angka1.value);
+var angka2=eval(myForm.angka2.value);
+var pil= myForm.opt.value;
+if (pil == "tambah") {
+var hasil = angka1 + angka2;
+ }else if (pil == "kurang") {
+var hasil = angka1 - angka2;
+ } else if (pil == "kali") {
+var hasil = angka1 * angka2;
+ } else if (pil == "bagi") {
+var hasil = angka1 / angka2;
+ }
+ myForm.hasil.value = hasil;
+ myForm.angka1.value = "";
+ myForm.angka2.value = "";
+}
+    </script>
+    </head>
+    <body>
+        <div class="container">
+         <div>
+                <p class="button">Ridwan's Calculator</p>
+                <img src="https://lh3.googleusercontent.com/FpQXb3fjRebih0ZMiuXK4NuWARD4zyG-5un8UYDoM0ha7IBOE9iqBtZYbxpV2kKB6w"/>
+           </div>
+           <hr>
+        <form name="kalkulator" action="#">
+            <p><input type="text" placeholder="Masukan Angka Ke 1" name="angka1" /></p>
+            <p><input type="text" placeholder="Masukan Angka Ke 2" name="angka2" /></p>
+            <p><input type="text" placeholder="Hasil" name="hasil" disabled="true" /></p>
+            <p> <select name="opt"></p>
+                    <option value="tambah"> + (tambah)</option>
+                    <option value="kurang"> - (kurang)</option>
+                    <option value="kali"> * (kali)</option>
+                    <option value="bagi"> / (bagi)</option>
+                </select><br>
+                <input style="margin-right:250px" type="button" value="Hasil" class="button" onClick="hitung()" /
+        </form>    
+    </body>
+</html>
